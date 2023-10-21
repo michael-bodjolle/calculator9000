@@ -6,7 +6,7 @@ function EgalButton(props){
 
     return(  
       
-        <button   className='button' onClick={()=> {props.handleClickEgal(props.egal)}}> {props.egal}</button>
+        <button   className='egalbutton' onClick={()=> {props.handleClickEgal(props.egal)}}> {props.egal}</button>
    
   )
 

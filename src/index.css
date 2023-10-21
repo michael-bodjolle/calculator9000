@@ -13,20 +13,26 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Fira sans', sans-serif;
+  
 }
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: var(--dark);
+   background: var(--dark);
   color: #EEE;
+  
+background: linear-gradient(145deg, #cacaca, #f0f0f0);
+/* box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff; */
 }
 .title{
     font-size: 2.5rem;
     font-weight: 600 ;
     color:var(--gray) ;
     margin-bottom: 1rem;
+    
 }
 .screen{
   display: flex;
@@ -44,11 +50,17 @@ body {
   /* background: none; */
 
 margin: 10px;
-background-color: var(--darker);
+background-color: var(--darkest);
 color: var(--light);
 font-size: 1.5rem;
-border-radius: 10px;
+border-radius: 5px;
 width: 3rem;
+box-shadow: inset 5px 5px 8px var(--dark),
+inset -5px -5px 8px  var(--darker);
+cursor: pointer;
+}
+.button:hover{
+  background-color: var(--darker);
 }
 .opebutton{
   /* appearance: none; */
@@ -57,19 +69,38 @@ width: 3rem;
   /* background: none; */
 
 margin: 10px;
-background-color: rgb(255, 255, 0);
+background-color: rgba(255, 255, 0, 0.648);
 color: var(--darkest);
 font-size: 1.5rem;
-border-radius: 10px;
+border-radius: 5px;
+box-shadow: inset 5px 5px 8px rgba(255, 255, 0, 0.317),
+inset -5px -5px 8px  rgba(255, 255, 0, 0.469);
 width: 3rem;
+}
+
+.egalbutton{
+border: none;
+margin: 10px;
+background-color:var(--gray) ;
+color: var(--darkest);
+font-size: 1.5rem;
+border-radius: 5px;
+width: 3rem;
+box-shadow: inset 5px 5px 8px rgba(30, 27, 27, 0.218),
+inset -5px -5px 8px  rgba(17, 17, 17, 0.159);
 }
 .content{
   
-  background-color: var(--gray);
+  /* background: linear-gradient( 500deg, var(--darker), var(--dark)); */
+  background: var(--gray);
   padding: 6vh;
-  height: 65vh;
-  border-radius: 25px;
-  box-shadow: 0px 1px 2px  var(--darkest);
+  height: 70vh;
+  border-radius: 10px;
+  /* box-shadow: inset 5px 5px 8px var(--darker),
+  inset -5px -5px 8px  var(--darker); */
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
 }
 
 .buttoncontent{
@@ -79,5 +110,6 @@ width: 3rem;
  
 
 }
+
 
 

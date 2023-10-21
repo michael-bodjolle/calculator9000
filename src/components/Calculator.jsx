@@ -11,7 +11,7 @@ import { useState } from 'react';
 function Calculator() {
 
 const [resultScreen, setResultScreen] = useState("0");
-const [showResults, setShowResults] = useState(false)
+const [operationResults, setOperationResults] = useState("0")
 
   const numbers = [7,8,9,4,5,6,1,2,3,0];
   const operators = ["+", "-", "*","/", "C","."];
@@ -29,24 +29,18 @@ const [showResults, setShowResults] = useState(false)
       } else {
         
         setResultScreen(""+ resultScreen  + value);
+        
       }
-      
-       
       // console.log(setResultScreen(resultScreen));
     }
 
-   
-
-    if (value === "=") {
-        
-       
-      handleClickEgal()
+  if (value === "=") {
+        handleClickEgal()
   }
 
     }
     
- 
-  function handleClickRemove(){
+    function handleClickRemove(){
    
     setResultScreen("0");
   }
@@ -55,7 +49,7 @@ const [showResults, setShowResults] = useState(false)
    console.log(eval(resultScreen));
    const resCalcul = eval(resultScreen);
   
-   if (resCalcul >= 9000) {
+  if (resCalcul >= 9000) {
       
     console.log("!It’s Over 9000 !!");
     setResultScreen("It’s Over 9000 !!");
@@ -84,7 +78,7 @@ const [showResults, setShowResults] = useState(false)
      <Title text="Calculator 9000"/>
     <div className='content'> 
     {/* <ItSOverNineThousand/> */}
-    <BeautifulScreen   text= {resultScreen}/>
+    <BeautifulScreen  text= {resultScreen}/>
     <div className='buttoncontent'>
       
       {numbers.map((number, index) => (
@@ -98,11 +92,7 @@ const [showResults, setShowResults] = useState(false)
      <EgalButton egal="="  handleClickEgal={handleClickEgal} handleClick={handleClick}/>
      </div>
      </div>
-    
-  
-     
-
-    </>
+ </>
 
   ) }
 
